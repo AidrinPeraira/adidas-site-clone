@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* This is to remove any default values from
+  browser and make the code more presdictable for us */
+
+body {
+    font-family: "BMWTypeNext Pro Regular"; 
+    color: white;
+    width: 100%;  
+}

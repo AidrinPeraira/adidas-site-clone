@@ -6,8 +6,263 @@
  /* This is to remove any default values from
   browser and make the code more presdictable for us */
 
-body {
-    font-family: "BMWTypeNext Pro Regular"; 
-    color: white;
-    width: 100%;  
+@font-face {
+font-family: 'CustomFont-Bold';
+src: url('/fonts/DINWebPro-Bold.woff') format('woff');
+font-weight: normal;
+font-style: normal;
 }
+
+@font-face {
+font-family: 'CustomFont-Medium';
+src: url('/fonts/DINWebPro-Medium.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+/* width works fine while the height is stuck at 0. 
+This happens because by default, the height of an 
+element like .main-container (or any block-level element) 
+depends on the height of its content. Since there's no 
+content inside .main-container and no specific height has 
+been set, its height defaults to 0.
+
+Additionally, using height: 100% on .main-container
+doesn't work as expected because the parent element 
+(body) does not have a defined height. For an element 
+to take 100% height, all parent elements (including 
+html and body) must also have a defined height. */
+
+body {
+    font-family: 'CustomFont-Bold', sans-serif; 
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+#top-margin{
+    width: 100%;
+    height: 15px;
+    top: 0;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    z-index: 999;
+}
+
+#bottom-margin{
+    width: 100%;
+    height: 15px;
+    bottom: 0;
+    position: fixed;
+    background-color: rgb(255, 255, 255);    
+    z-index: 999;
+}
+
+#left-margin{
+    height: 100%;
+    width: 15px;
+    left: 0;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    z-index: 999;
+}
+
+#right-margin{
+    height: 100%;
+    width: 15px;
+    right: 0;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    z-index: 999;
+}
+
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: end;
+    z-index: 1;
+}
+
+
+    .logo-container{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: flex-end;
+        margin-left: 5%;
+    }
+
+    .logo-container img{
+        width: 100%;
+    }
+
+
+    .nav-bar-container{
+        display: flex;
+        height: 100%;
+        padding-bottom: 10px;
+        align-items: flex-end;
+        margin-right: 5%;
+    }
+
+    .nav-list{
+        height: 100%;
+        display: flex;
+        gap: 25px;
+        list-style: none;
+        font-size: 1.5rem;  
+        letter-spacing: 2px;      
+    }
+
+    .nav-item{
+        margin-left: 20;
+        padding-top: 70;
+        height: 100%;
+        color: white;
+    }
+    
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+    .background-container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* .background-video{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: none;
+    }
+
+    .background-video iframe{
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+    } */
+
+    .background-image{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background-color: red;
+    }
+
+    .background-image img{
+        opacity: 1;
+        min-height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+    .info-container{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        gap: 20px;
+        justify-self: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .text-line{
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    #text-one{        
+        border-bottom: 1px solid white;
+    }
+
+    #break-one{
+        display: flex;
+        align-items: center;
+        display: none;
+    }
+
+    .heading-line{
+        font-size: 50px;
+    }
+
+    #break-two{
+        display: flex;
+        align-items: center;
+    }
+
+    .break-line span{
+        width: 100px;
+        height: 7px;
+        background-color: white;        
+    }
+
+    #text-two{
+        font-family: 'CustomFont-Medium';
+        font-size: medium;
+        letter-spacing: 2px;
+        line-height: 25px;
+        text-align: center;
+        margin-top: 40px;
+        max-width: 900px;
+    }
+
+footer{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+    .footer-container{     
+        width: 100%;
+        height: 100%;   
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+    .footer-item{
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    
+

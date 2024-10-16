@@ -170,6 +170,7 @@ header{
 
     .left-arrow-text{
         height: 100%;
+        width: fit-content;
         background-color: white;
         color: rgb(197,151,16);
         position: absolute;
@@ -184,7 +185,6 @@ header{
 
     .left-arrow-container:hover .left-arrow-text{
         left: 20px;
-        width: 100px;
         opacity: 2;
         background-color: white;
         transition: all 0.3s ease-in-out;
@@ -207,6 +207,7 @@ header{
 
     .right-arrow-text{
         height: 100%;
+        width: fit-content;
         background-color: white;
         color: rgb(197,151,16);
         position: absolute;
@@ -220,7 +221,6 @@ header{
 
     .right-arrow-container:hover .right-arrow-text{
         right: 20px;
-        width: 100px;
         opacity: 2;
         background-color: white;
         transition: all 0.3s ease-in-out;
@@ -380,6 +380,56 @@ footer{
         width: 12px;
     }
 
+
+
+.images-gallery{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .image-container{
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .image-text{
+        position: relative;
+    }
+
+    .image-wrapper{
+        max-width: 400px;
+        aspect-ratio: 16/9;
+        position: relative;
+        overflow: hidden;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-wrapper img{
+        width: 100%;
+    }
+
+    .img-caption{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }   
+
+    .image-text{
+        font-size: 12px;
+    }
 
     
 

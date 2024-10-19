@@ -8,14 +8,14 @@
 
 @font-face {
 font-family: 'CustomFont-Bold';
-src: url('fonts/DINWebPro-Bold.woff') format('woff');
+src: url('../fonts/DINWebPro-Bold.woff') format('woff');
 font-weight: normal;
 font-style: normal;
 }
 
 @font-face {
 font-family: 'CustomFont-Medium';
-src: url('fonts/DINWebPro-Medium.woff') format('woff');
+src: url('../fonts/DINWebPro-Medium.woff') format('woff');
 font-weight: normal;
 font-style: normal;
 }
